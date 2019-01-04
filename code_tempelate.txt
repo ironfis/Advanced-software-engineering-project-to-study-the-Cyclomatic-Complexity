@@ -1,0 +1,37 @@
+//Define Stats () Function
+
+_Bool Stats (int size, int inArray[], int outArray[], int *mode, float *mean, float *median, float *variance, float *stdev)
+{
+    
+    // Function Input:
+    // The function input is comprised of the the first two parameters in the Stats()argument list :
+    //    1. size  equals the number of elements in the input array (inArray[]).
+    //    2. inArray[] is an unsorted array of integer numbers of type int. The numbers may be positive or negative.
+    //       There is no limit on the size of the numbers.  The values may be as large or as small as is allowed by
+    //       the float type on the particular computer that executes the function.
+    //       The input data will be stored in range inArray [0] to inArray[size-1].
+    
+    // Function Output:
+    
+    
+    // The function will produce six outputs consisting of the latter five parameters in the Stats() argument list
+    // plus the Stats() _Bool return parameter:
+    //    1. outArray[] (type int) contains the result of an ascending (lowest-to-highest)
+    //       order sort of the numbers in the input array (inArray[]). The array may be sorted using any method
+    //       chosen by the programmer.  The lowest value will be in outArray[0]. Highest value will be in outArray [size-1].
+	//    2. mode  (type * int) is a pointer to the most frequently occurring value in the sorted array (outArray[0]).  
+	//          If there is no mode, provide the minimum value of the array.  
+	//          If there is more than one mode, the one that occurs most frequently should be returned.  
+	//          If there are two or more modes that occur equally frequently, the lowest one should be returned.
+	//    3. mean  (type * float) is a pointer to the average of the values of the elements in the sorted array, as follows):
+    //          mean = (?_(i=0)^(size-1)¦?outArray?_i ) / size
+	//    4. median (type * float) is a pointer to the center value of the sorted array as follows:
+    //          If size is odd, median is outArray [size/2] (the decimal portion of the result of size/2 is truncated)
+    //          If size is even, median is (outArray[size/2] + outArray[size/2 - 1]) / 2
+	//    5. variance (type * float): pointer to the variance of the values in the sorted array 
+	//    6. stdev (type * float): is a pointer to standard deviation of the values in the sorted array which is square root of variance.
+	//    7. Stats()(type _Bool) returns 1 if size > 0 and returns 0 if size <= 0.
+    
+    //code sarts here
+
+ YOUR FUNCTION GOES HERE

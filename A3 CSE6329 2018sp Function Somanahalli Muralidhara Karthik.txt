@@ -1,0 +1,84 @@
+Bool Stats (int size, int inArray[], int outArray[],int *mode, float *mean, float *median, float *variance, float *stdev)
+{
+int i,j, temp, count = 0;
+int T[size];
+float x[8];
+float s=0, s1=0;                                              /* Where s is the sum variable initialized to 0 and s1 is another sum variable */
+
+    /* Sort the Array */
+
+for(i=0; i<size; i++)
+ {
+    for(j=0; j<size-1; j++) 
+    {
+        if(inArray[j]>inArray[j+1])
+       {
+            temp = inArray[j+1];				/* Where temp is a temporary variable */
+            inArray[j+1] = inArray[j];
+            inArray[j] = temp;
+        }
+		temp = outArray[j];
+    }
+}
+
+    /* Compute Mean */ 
+
+for (i = 0; i < size; i++)
+    {
+        s = s + x[i];
+    }
+    mean = s/(float)size;   return mean;
+
+
+    /*  Compute  median  */
+
+ for(i = 0; i < size; i++)
+        for(j = i+1; j < size; j++)
+       {
+            if(inArray[i]>inArray[j]) 
+            {
+                temp=inArray[j];
+                inArray[j] = inArray[i];
+                inArray[i] = temp;
+            }
+        }
+        if(size%2==0) 
+        {
+            median = (inArray[size/2]+inArray[total/2-1])/2;
+        }
+  else
+      {
+            median = inArray[size/2];
+      }
+return median;
+
+    /*     Compute Mode    */
+
+ for (i = 0; i < size; i++) 
+   {
+         T[inArray[i]]++;						/* Where T[] is used to tally between current mode value and the total size of the array */ 
+    }
+    mode=0;
+  
+    for (j = 0; j < size; j++) 
+   {
+        if (T[j] > Count)
+        {
+            Count = T[j];
+            mode = j;
+        }
+    }
+return mode;
+    
+/*  Compute  variance  and standard deviation  */
+   
+ for (i = 0; i < size; i++)
+    {
+        s1 = s1 + pow((x[i] - mean), 2);
+    }
+    variance = s1 / (float)size;
+    stdev = sqrt(variance);
+return variance;
+return stdev;
+}
+   
